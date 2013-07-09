@@ -39,10 +39,10 @@ module Stupeflix
       r.parsed_response rescue r
     end
     
-    def profile_url(name)¬
-      params, _ = req('GET', nil, nil, Time.now.to_i, url = "#{self.url}/#{name}/")¬
-      "#{self.class.base_uri}#{url}?#{URI.encode_www_form(self.class.default_params.merge(params))}"¬
-    end¬
+    def profile_url(name)
+      params, _ = req('GET', nil, nil, Time.now.to_i, url = "#{self.url}/#{name}/")
+      "#{self.class.base_uri}#{url}?#{URI.encode_www_form(self.class.default_params.merge(params))}"
+    end
 
     def url
       "/stupeflix-1.0/#{@id}" # user/resource
